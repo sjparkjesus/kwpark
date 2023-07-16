@@ -61,11 +61,11 @@
         const prediction = await model.predict(webcam.canvas);
 
         if(prediction[0].className == '졸음' && prediction[0].probability.toFixed(2) > 0.60) {
-            window.location.href = "./졸음.html";
+            window.location.href = "./sleep.html";
         }else if(prediction[1].className == '핸드폰' && prediction[1].probability.toFixed(2) > 0.60) {
-            window.location.href = "./핸드폰.html";
+            window.location.href = "./mobile.html";
         }else if(prediction[2].className == '화장실' && prediction[2].probability.toFixed(2) > 0.60) {
-            window.location.href = "./화장실.html";
+            window.location.href = "./restroom.html";
         }else
         {
             window.location.href = "./fail.html";
